@@ -1,0 +1,71 @@
+# Git files
+.git
+.gitignore
+.worktrees
+
+# Caches
+.bun-cache
+.bun
+.tmp
+**/.tmp
+.DS_Store
+**/.DS_Store
+.pnpm-store
+**/.pnpm-store
+.turbo
+**/.turbo
+.cache
+**/.cache
+.next
+**/.next
+
+# Build artifacts (we'll rebuild in Cloud Build)
+dist
+**/dist
+apps/macos/.build
+apps/ios/build
+**/*.trace
+coverage
+**/coverage
+
+# Logs and temp files
+*.log
+tmp
+**/tmp
+
+# Media files (not needed for build)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# Large directories not needed for CLI build
+apps/
+Peekaboo/
+Swabble/
+Core/
+Users/
+vendor/
+
+# Development files
+node_modules
+**/node_modules
+
+# Cloud Build files
+cloudbuild.yaml
+.gcloudignore
+
+# BUT keep these essential files:
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!.npmrc
+!patches
+!scripts
+!ui/package.json
+!Dockerfile.cloudrun

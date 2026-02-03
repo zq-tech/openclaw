@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/affable-context-486313-h8/openclaw'
+      - '-f'
+      - 'Dockerfile.cloudrun'
+      - '.'
+images:
+  - 'gcr.io/affable-context-486313-h8/openclaw'
+timeout: 1200s
